@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     await Future.delayed(const Duration(milliseconds: 5000), (){});
 
-    print('Hola');
+    // print('Hola');
 
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => OnBoarding()));
@@ -96,8 +96,10 @@ class _SplashScreanCanvas extends CustomPainter {
 
     path.lineTo(0, size.height*0.10);
 
-    path.quadraticBezierTo(size.width*0.1, size.height * 0.20, size.width/3, size.height*0.10);
-    path.quadraticBezierTo(size.width/2.5, size.height * 0.08, 2*(size.width/3), size.height*0.12);
+    path.quadraticBezierTo(size.width*0.1, size.height * 0.20, size.width/3, size.height*0.12);
+    
+    path.quadraticBezierTo(size.width/2.1, size.height * 0.08, 2*(size.width/3), size.height*0.12);
+    
     path.quadraticBezierTo(size.width/1.2, size.height * 0.15, 3*(size.width/3), size.height*0.1);
 
     path.lineTo(size.width, 0);
