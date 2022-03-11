@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _loadImage('lib/assets/splash.png');
 
-    // _toOnBording();
+    _toOnBording();
   }
 
   @override
