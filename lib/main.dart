@@ -1,4 +1,5 @@
 import 'package:appvet/src/pages/home_headers.dart';
+import 'package:appvet/src/splashScreen/splash_view.dart';
 import 'package:appvet/src/widgets/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -15,16 +16,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'InitialHeader',
+      initialRoute: 'SplashScreen',
       routes: {
         'InitialPage': (BuildContext context) => HomePage(),
         'InitialHeader': (BuildContext context) => const HomeHeader(),
+        'SplashScreen': (BuildContext context) => SplashScreen(),
 
       },
       // home: HomePage(),
