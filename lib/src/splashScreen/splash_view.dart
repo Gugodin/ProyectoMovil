@@ -1,3 +1,4 @@
+import 'package:appvet/src/styles/colors/colors_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _loadImage('lib/assets/pet.png');
+    _loadImage('lib/assets/splash.png');
 
     // _toOnBording();
   }
@@ -86,7 +87,7 @@ class _SplashScreanCanvas extends CustomPainter {
     
     final paint = Paint();
 
-    paint.color = Colors.amber;
+    paint.color = ColorSelect.splashColor;
 
     paint.style = PaintingStyle.fill;
 
@@ -95,9 +96,9 @@ class _SplashScreanCanvas extends CustomPainter {
 
     path.lineTo(0, size.height*0.10);
 
-    path.quadraticBezierTo(size.width*0.03, size.height * 0.25, size.width/3, size.height*0.15);
-    path.quadraticBezierTo(size.width/2, size.height * 0.25, 2*(size.width/3), size.height*0.15);
-    path.quadraticBezierTo(size.width/1.2, size.height * 0.25, 3*(size.width/3), size.height*0.15);
+    path.quadraticBezierTo(size.width*0.1, size.height * 0.20, size.width/3, size.height*0.10);
+    path.quadraticBezierTo(size.width/2.5, size.height * 0.08, 2*(size.width/3), size.height*0.12);
+    path.quadraticBezierTo(size.width/1.2, size.height * 0.15, 3*(size.width/3), size.height*0.1);
 
     path.lineTo(size.width, 0);
 
@@ -105,7 +106,7 @@ class _SplashScreanCanvas extends CustomPainter {
 
     final paint2 = Paint();
 
-    paint2.color = Colors.amber;
+    paint2.color = ColorSelect.splashColor;
 
     paint2.style = PaintingStyle.fill;
 
@@ -118,16 +119,16 @@ class _SplashScreanCanvas extends CustomPainter {
     // path2.quadraticBezierTo(size.width*0.03, size.height * 0.25, size.width/3, size.height*0.15);
     // path2.quadraticBezierTo(size.width/2, size.height * 0.25, 2*(size.width/3), size.height*0.15);
     // path2.quadraticBezierTo(size.width/1.2, size.height * 0.25, 3*(size.width/3), size.height*0.15);
-    path2.quadraticBezierTo(size.width*0.50, size.height*0.70, size.width, size.height);
+    path2.quadraticBezierTo(size.width*0.70, size.height*0.80, size.width, size.height);
 
     path2.lineTo(size.width, size.height);
     path2.lineTo(0, size.height);
 
     canvas.drawPath(path2, paint2);
 
-    canvas.scale(0.24,0.24);
+    canvas.scale(0.30,0.30);
     
-    // canvas.drawImage(imageCanvas!, offset, paint);
+    canvas.drawImage(imageCanvas!, const Offset(125 * 2.5, 320 * 3.0), paint);
   }
 
   @override

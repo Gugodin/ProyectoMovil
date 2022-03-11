@@ -12,5 +12,8 @@ class ColorSelect{
   static const Color btnBackgroundBo2 = Color(0xFF76a757);
 
 
+  static const Color splashColor = Color(0xFF76aB56);
+
+
 
 }
