@@ -88,18 +88,42 @@ class _SplashScreanCanvas extends CustomPainter {
 
     paint.color = Colors.amber;
 
-    paint.style = PaintingStyle.stroke;
+    paint.style = PaintingStyle.fill;
 
     paint.strokeWidth = 5;
     final path = Path();
 
-    path.lineTo(0, size.height*0.20);
+    path.lineTo(0, size.height*0.10);
 
-    path.quadraticBezierTo(size.width*0.50, size.height*0.30, size.width, size.height*0.20);
+    path.quadraticBezierTo(size.width*0.03, size.height * 0.25, size.width/3, size.height*0.15);
+    path.quadraticBezierTo(size.width/2, size.height * 0.25, 2*(size.width/3), size.height*0.15);
+    path.quadraticBezierTo(size.width/1.2, size.height * 0.25, 3*(size.width/3), size.height*0.15);
 
     path.lineTo(size.width, 0);
 
     canvas.drawPath(path, paint);
+
+    final paint2 = Paint();
+
+    paint2.color = Colors.amber;
+
+    paint2.style = PaintingStyle.fill;
+
+    paint2.strokeWidth = 5;
+
+    final path2 = Path();
+
+    path2.lineTo(0, size.height);
+
+    // path2.quadraticBezierTo(size.width*0.03, size.height * 0.25, size.width/3, size.height*0.15);
+    // path2.quadraticBezierTo(size.width/2, size.height * 0.25, 2*(size.width/3), size.height*0.15);
+    // path2.quadraticBezierTo(size.width/1.2, size.height * 0.25, 3*(size.width/3), size.height*0.15);
+    path2.quadraticBezierTo(size.width*0.50, size.height*0.70, size.width, size.height);
+
+    path2.lineTo(size.width, size.height);
+    path2.lineTo(0, size.height);
+
+    canvas.drawPath(path2, paint2);
 
     canvas.scale(0.24,0.24);
     
