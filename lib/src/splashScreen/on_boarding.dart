@@ -79,6 +79,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     ),
                   ),
                   const Padding(padding: EdgeInsets.only(top: 180)),
+                  
                   SizedBox(
                     width: 300,
                     height: 50,

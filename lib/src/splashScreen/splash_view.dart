@@ -6,6 +6,7 @@ import 'dart:ui' as ui;
 import 'on_boarding.dart';
 
 class SplashScreen extends StatefulWidget {
+  
   SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _loadImage('lib/assets/splash.png');
 
-    _toOnBording();
+      _toOnBording();
   }
 
   @override
@@ -94,12 +95,11 @@ class _SplashScreanCanvas extends CustomPainter {
     paint.strokeWidth = 5;
     final path = Path();
 
-    path.lineTo(0, size.height*0.10);
+     path.lineTo(0, size.height*0.10);
 
     path.quadraticBezierTo(size.width*0.1, size.height * 0.20, size.width/3, size.height*0.12);
     
     path.quadraticBezierTo(size.width/2.1, size.height * 0.08, 2*(size.width/3), size.height*0.12);
-    
     path.quadraticBezierTo(size.width/1.2, size.height * 0.15, 3*(size.width/3), size.height*0.1);
 
     path.lineTo(size.width, 0);
